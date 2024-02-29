@@ -11,7 +11,12 @@ public class SemanticAnalysisHandlerTests {
     String expected = "joe: hi\n\n";
     assertEquals(expected, h.handleRequest(input));
   }
-
+  @Test
+  public void handleRequestsMulti() throws Exception {
+    ChatHandler h = new ChatHandler();
+      String url1 = "http://localhost:4000/chat?user=onat&message=😂";
+      String url2 = "http://localhost:4000/chat?user=onat&message=doggy🥹!!!😂";
+  }
   @Test
   public void handleRequestMulti() throws Exception {
     ChatHandler h = new ChatHandler();
